@@ -2,13 +2,7 @@ package com.develop.sample.akka.bank;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
-import com.develop.sample.akka.bank.actors.BankAccountActor;
-import com.develop.sample.akka.bank.actors.BankAccountSupervisor;
-import com.develop.sample.akka.bank.models.BankAccount;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import scala.concurrent.Await;
 
 import java.util.stream.IntStream;
@@ -39,6 +33,7 @@ public class BankAccountExamples {
         bankActor = (ActorRef) Await.result(ask(supervisor, BankAccountActor.createProps(), 5000), TestTimeout);
     }
 
+    @Ignore
     @Test
     public void givenMultithreading_whenMultipleRequestsOccur_thenAttemptToAvoidOverdraftingAccount() throws Exception {
         BankAccount account = new BankAccount();

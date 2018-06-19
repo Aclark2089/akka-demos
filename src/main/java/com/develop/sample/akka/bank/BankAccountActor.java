@@ -1,9 +1,8 @@
-package com.develop.sample.akka.bank.actors;
+package com.develop.sample.akka.bank;
 
 import akka.actor.AbstractActor;
 import akka.actor.Props;
 import akka.event.LoggingAdapter;
-import com.develop.sample.akka.bank.models.BankAccount;
 
 public class BankAccountActor extends AbstractActor  {
 

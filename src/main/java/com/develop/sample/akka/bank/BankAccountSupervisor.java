@@ -1,4 +1,4 @@
-package com.develop.sample.akka.bank.actors;
+package com.develop.sample.akka.bank;
 
 import akka.actor.AbstractActor;
 import akka.actor.OneForOneStrategy;
@@ -6,7 +6,6 @@ import akka.actor.Props;
 import akka.actor.SupervisorStrategy;
 import akka.event.LoggingAdapter;
 import akka.japi.pf.DeciderBuilder;
-import com.develop.sample.akka.bank.exceptions.OverdraftException;
 import scala.concurrent.duration.Duration;
 
 import java.util.concurrent.TimeUnit;

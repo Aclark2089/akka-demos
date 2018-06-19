@@ -1,4 +1,4 @@
-package com.develop.sample.akka.bank.exceptions;
+package com.develop.sample.akka.bank;
 
 public class OverdraftException extends RuntimeException {
     public OverdraftException() {

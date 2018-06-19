@@ -1,6 +1,4 @@
-package com.develop.sample.akka.bank.models;
-
-import com.develop.sample.akka.bank.exceptions.OverdraftException;
+package com.develop.sample.akka.bank;
 
 import java.util.Random;
 
