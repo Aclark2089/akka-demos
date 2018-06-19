@@ -76,7 +76,7 @@ public class BankAccountExamples {
         // A thread that asynchronously sends withdraw requests to the BankAccountActor
         Thread actorWithdrawThread = new Thread(() -> {
             IntStream.range(0, 25).forEach(i -> {
-                new Thread(() -> bankActor.tell(new BankAccountActor.WithdrawRequest(7), ActorRef.noSender())).start();
+                new Thread(() -> bankActor.tell(new BankAccountActor.WithdrawRequest(8), ActorRef.noSender())).start();
             });
         });
 
