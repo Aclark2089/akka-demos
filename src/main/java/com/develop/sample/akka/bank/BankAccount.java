@@ -7,6 +7,7 @@ import java.util.Random;
 public class BankAccount {
 
     private double balance;
+    private static final Random randomizer = new Random();
 
     public BankAccount() {
         balance = 0.0;
@@ -37,8 +38,7 @@ public class BankAccount {
     // Simulate selective lag where our threads could cross over
     // 50% of the time, it works every time
     private void lag() {
-        Random r = new Random();
-        if (r.nextInt(2) == 1) {
+        if (randomizer.nextBoolean()) {
             try {
                 Thread.sleep(100L);
             } catch (InterruptedException e) {}
